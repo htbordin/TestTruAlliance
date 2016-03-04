@@ -1,0 +1,55 @@
+﻿@model TechTest01.Web.Models.ProductSingleModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1> Products id = @Model.Product.Slug</h1>
+
+        <a href="/"><<< back</a>
+        <table width="600" border="1">
+            <tr>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
+
+            </tr>
+
+                <tr>
+                    <td>
+                        <img src="@Model.Product.ImageUrl" width="200" />
+                     </td>
+                    <td>
+                        @Model.Product.Name
+                    </td>
+                    <td>
+                        @Model.Product.Description
+                    </td>
+                    <td>
+                        @Model.Product.Price
+                    </td>
+
+                </tr>
+           </table>
+
+
+    </div>
+</body>
+</html>
